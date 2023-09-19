@@ -1,8 +1,8 @@
 # MEaSUREs Strain Rates
 ## _Generating Strain Rate Products from MEaSUREs Antarctic data_
 
-[![Dockerized](https://github.com/jlinick/measures_strain_rate/docker/docker-logo.svg)](https://github.com/jlinick/measures_strain_rate)
-
+[![Dockerized](./docker/docker-logo.svg)](https://github.com/jlinick/measures_strain_rate)
+<img src="./docker/docker-logo.svg">
 Repository for retrieving, merging, & generating strain rate data from MEaSUREs data. Uses iceutils [https://github.com/bryanvriel/iceutils](https://github.com/bryanvriel/iceutils) for strain rates.
 
 -----
