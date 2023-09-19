@@ -1,0 +1,12 @@
+# ignore data types
+*.h5
+*.nc
+*.tif
+
+# ignore data files in MEASURES folder
+MEASURES/*.nc
+MEASURES/*.h5
+MEASURES/*.tif
+
+# other
+*.pyc

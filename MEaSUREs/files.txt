@@ -1,0 +1,16 @@
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2019.07.01/Antarctica_ice_velocity_2019_2020_1km_v01.1.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2018.07.01/Antarctica_ice_velocity_2018_2019_1km_v01.1.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2017.07.01/Antarctica_ice_velocity_2017_2018_1km_v01.1.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2016.07.01/Antarctica_ice_velocity_2016_2017_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2015.07.01/Antarctica_ice_velocity_2015_2016_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2014.07.01/Antarctica_ice_velocity_2014_2015_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2013.07.01/Antarctica_ice_velocity_2013_2014_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2012.07.01/Antarctica_ice_velocity_2012_2013_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2011.07.01/Antarctica_ice_velocity_2011_2012_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2010.07.01/Antarctica_ice_velocity_2010_2011_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2009.07.01/Antarctica_ice_velocity_2009_2010_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2008.07.01/Antarctica_ice_velocity_2008_2009_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2007.07.01/Antarctica_ice_velocity_2007_2008_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2006.07.01/Antarctica_ice_velocity_2006_2007_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2005.07.01/Antarctica_ice_velocity_2005_2006_1km_v01.nc
+https://n5eil01u.ecs.nsidc.org/DP4/MEASURES/NSIDC-0720.001/2000.07.01/Antarctica_ice_velocity_2000_2001_1km_v01.1.nc
