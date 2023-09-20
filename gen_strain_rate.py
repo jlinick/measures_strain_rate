@@ -15,7 +15,7 @@ from datashader.colors import inferno
 class data:
     
     def __init__(self, path, product_dir='/products', verbose=True):
-        '''initializes the velocity data stack and metadata'''
+        '''loads the data file, generates strain products, and outputs a strain netcdf with plots'''
         self.product_dir = product_dir
         self.output_path = os.path.join(product_dir, 'strain.nc')
         if not os.path.exists(self.output_path):
@@ -59,20 +59,6 @@ class data:
     def save(self):
         self.ds.to_netcdf(self.output_path)
 
-    def print_xarr(self):
-        # Print global attributes and their values
-        print("Global Attributes:")
-        for attr_name, attr_value in self.ds.attrs.items():
-            print(f"{attr_name} : {attr_value}")
-        # Print each variable name and its mean value
-        print("\nVariable Means:")
-        for var_name, variable in self.ds.data_vars.items():
-            try:
-                mean_value = np.nanmean(variable)
-                print(f"{var_name}: {variable.shape} {mean_value}")
-            except:
-                print(f"{var_name}: {variable.shape} {variable}")
-
     def save_plots(self, verbose=True):
         names = {'eta': 'effective_dynamic_viscosity', 'e_xx': 'longitudinal_strain_rate', 'e_yy': 'transverse_strain_rate', 'e_xy': 'shear_strain_rate', 'effective': 'effective_strain_rate',
                 'dilatation': 'dilatation', 't_xx': 'longitudinal_stress', 't_yy': 'transverse_stress', 't_xy': 'effective_stress'}
@@ -106,7 +92,6 @@ def plot(data_array, file_path, max_res=2000., verbose=True):
     agg = canvas.raster(data_array)
     img = tf.shade(agg, cmap=inferno)
     img.to_pil().save(file_path)
-
 
 
 if __name__ == '__main__':

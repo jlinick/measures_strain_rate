@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.nc" -exec mv {} ./MEASURES/ \;
+find . -name "*.nc" -exec mv {} ./MEaSUREs/ \;

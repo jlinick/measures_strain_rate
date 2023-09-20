@@ -5,10 +5,8 @@
 import os
 import numpy as np
 import netCDF4
-import h5py
 import xarray as xr
 import dask
-import datashader as ds
 from functools import partial
 
 def merge_folder(dirname, output_path='/products/mean.nc', crop_bounds=None, mean=True, verbose=True):
@@ -40,9 +38,6 @@ def gen_mean(ds, verbose=True) -> xr.DataArray:
     '''generates the mean along the fist axis for VX, VY, STDX, STDY, ERRX, ERRY, and then sums CNT.'''
     variables = ['VX', 'VY', 'STDX', 'STDY', 'ERRX', 'ERRY']
     for variable in variables:
-        #first_dim = list(ds[variable].dims)[0]
-        if verbose == True:
-            print('applying mean of {} over {}'.format(variable, 'time'))
         ds[variable] = ds[variable].mean(dim='time', skipna=True) # take the mean
     ds['CNT'] = ds['CNT'].sum(dim='time', skipna=True) # sum of count
     return ds
@@ -55,31 +50,6 @@ def crop(ds, crop_bounds=((-1822691,723307),(-1657028,459924))):
     lat_bounds = [max(lats), min(lats)]
     lon_bounds = [min(lons), max(lons)]
     return ds.sel(y=slice(*lat_bounds), x=slice(*lon_bounds))
-
-def save_h5(xarr, file_path):
-    '''saves an xarray to the given path'''
-    with h5py.File(file_path, 'w') as f:
-        dset = f.create_dataset('data', data=xarr, chunks=True, compression="gzip")
-
-def plot(data_array, file_path, width=3000, height=3000):
-    canvas = ds.Canvas(plot_width=width, plot_height=height)
-    agg = canvas.raster(data_array)
-    img = tf.shade(agg, cmap=inferno)
-    img.to_pil().save(file_path)
-
-def print_xarr(ds):
-    # Print global attributes and their values
-    print("Global Attributes:")
-    for attr_name, attr_value in ds.attrs.items():
-        print(f"{attr_name}: {attr_value}")
-    # Print each variable name and its mean value
-    print("\nVariable Means:")
-    for var_name, variable in ds.data_vars.items():
-        try:
-            mean_value = np.nanmean(variable)
-            print(f"{var_name}: {variable.shape} {mean_value}")
-        except:
-            print(f"{var_name}: {variable.shape} {variable}")
 
 
 if __name__ == '__main__':
